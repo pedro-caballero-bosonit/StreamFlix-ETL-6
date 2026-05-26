@@ -1,0 +1,9 @@
+target/
+.idea/
+*.class
+*.jar
+*.crc
+project/target/
+project/project/
+src/main/resources/data/server_logs.txt
+src/main/resources/output/
