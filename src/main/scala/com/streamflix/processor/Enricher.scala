@@ -1,9 +1,9 @@
 package com.streamflix.processor
 
+import org.apache.spark.sql.{SparkSession, DataFrame}
 import org.apache.log4j.Logger
-import org.apache.spark.sql.{DataFrame, SparkSession}
-import org.apache.spark.sql.functions._
 import scala.util.{Try, Success, Failure}
+import org.apache.spark.sql.functions._
 
 object Enricher {
   private val logger = Logger.getLogger(getClass.getName)
@@ -15,7 +15,7 @@ object Enricher {
     Try{
       val enrichedDF = logsDF.join(
         broadcast(moviesDF),
-        logsDF("moviesId") === moviesDF("id"),
+        logsDF("movieId") === moviesDF("id"),
         "inner"
       )
       logger.info(s"Join completado: ${enrichedDF.count()} registros")

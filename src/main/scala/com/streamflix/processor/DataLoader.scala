@@ -1,8 +1,8 @@
 package com.streamflix.processor
 
-import org.apache.log4j.Logger
-import org.apache.spark.sql.{DataFrame, SparkSession}
+import org.apache.spark.sql.{SparkSession, DataFrame}
 import org.apache.spark.sql.types._
+import org.apache.log4j.Logger
 import scala.util.{Try, Success, Failure}
 
 object DataLoader {
