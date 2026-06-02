@@ -93,7 +93,6 @@ object Main {
     //5. Cerramos la SparkSession
     spark.stop()
     // libera todos los recursos de Spark
-    // siempre al final, pase lo que pase
   }
 }
 
